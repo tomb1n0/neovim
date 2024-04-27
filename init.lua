@@ -19,3 +19,6 @@ vim.opt.rtp:prepend(lazypath)
 -- This way each plugin can have it's own file, making configuration a bit easier
 -- to manage in a modular way.
 require("lazy").setup("plugins", {})
+
+-- Colorscheme will often depend on a plugin, so load this after
+require("core.colorscheme")
