@@ -73,6 +73,7 @@ return { -- Autocompletion
 				--['<Tab>'] = cmp.mapping.select_next_item(),
 				--['<S-Tab>'] = cmp.mapping.select_prev_item(),
 
+				["<CR>"] = cmp.mapping.confirm({ select = true }),
 				-- Manually trigger a completion from nvim-cmp.
 				--  Generally you don't need this, because nvim-cmp will display
 				--  completions whenever it has completion options available.
@@ -108,4 +109,3 @@ return { -- Autocompletion
 		})
 	end,
 }
-
