@@ -167,7 +167,8 @@ return { -- LSP Configuration & Plugins
 			-- But for many setups, the LSP (`tsserver`) will work just fine
 			-- tsserver = {},
 			--
-
+			tsserver = {},
+			intelephense = {},
 			lua_ls = {
 				-- cmd = {...},
 				-- filetypes = { ...},
@@ -210,6 +211,14 @@ return { -- LSP Configuration & Plugins
 					server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
 					require("lspconfig")[server_name].setup(server)
 				end,
+			},
+		})
+
+		require("lspconfig").volar.setup({
+			init_options = {
+				vue = {
+					hybridMode = false,
+				},
 			},
 		})
 	end,
