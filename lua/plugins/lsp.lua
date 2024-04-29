@@ -175,6 +175,7 @@ return { -- LSP Configuration & Plugins
 			-- tsserver = {},
 			--
 			tsserver = {},
+			cssls = {},
 			intelephense = {},
 			lua_ls = {
 				-- cmd = {...},
