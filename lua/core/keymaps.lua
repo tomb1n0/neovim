@@ -100,9 +100,9 @@ vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower win
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
 -- Pest PHP Keybinds
-vim.keymap.set("n", "<leader>p", function()
+vim.keymap.set("n", "<leader>pr", function()
 	vim.cmd("!volker pest %")
-end, { desc = "Run Pest PHP on current file" })
+end, { desc = "[P]est [R]un for current file" })
 
 -- Volker PHP Keybinds
 vim.keymap.set("n", "<leader>vdb", function()
