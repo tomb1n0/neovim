@@ -32,6 +32,8 @@ return { -- Autoformat
 			-- is found.
 			-- javascript = { { "prettierd", "prettier" } },
 			php = { "prettier" },
+			javascript = { "prettier" },
+			vue = { "prettier" },
 		},
 	},
 }
