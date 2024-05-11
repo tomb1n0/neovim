@@ -127,3 +127,11 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank()
 	end,
 })
+
+vim.keymap.set("n", "<leader>tn", function()
+	require("neotest").run.run()
+end, { desc = "[T]est [N]earest" })
+
+vim.keymap.set("n", "<leader>tf", function()
+	require("neotest").run.run(vim.fn.expand("%"))
+end, { desc = "[T]est [F]ile" })
