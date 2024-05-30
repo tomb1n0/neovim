@@ -101,7 +101,12 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 
 -- Pest PHP Keybinds
 vim.keymap.set("n", "<leader>pr", function()
-	vim.cmd("!volker pest %")
+	local file = vim.api.nvim_buf_get_name(0)
+
+	-- Remove everything before tests/
+	local replaced_file = string.gsub(file, ".*tests/", "tests/")
+
+	vim.cmd("!volker pest " .. replaced_file)
 end, { desc = "[P]est [R]un for current file" })
 
 -- Volker PHP Keybinds
