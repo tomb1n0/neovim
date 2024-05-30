@@ -1,5 +1,10 @@
 -- Core Keymaps
 require("core.keymaps")
+require("core.misc")
+
+if vim.g.neovide then
+	require("core.neovide")
+end
 
 -- Install Lazy for Plugin Management
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
