@@ -13,7 +13,9 @@ vim.g.have_nerd_font = true
 --  For more options, you can see `:help option-list`
 
 -- tabstop of 4 by default
+vim.opt.expandtab = true
 vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 
 -- Make line numbers default
 vim.opt.number = true
